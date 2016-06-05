@@ -3,14 +3,14 @@ Script which ensures [ZNC](http://wiki.znc.in/ZNC) is started during Synology Di
 
 ### Problem
 
-After installation of [ZNC package from SynoCommunity](https://synocommunity.com/package/znc) on DSM (>= 6). ZNC will fail to start from "Package Center" with following [error.](https://hodzic.org/img/znc/znc%20package%20center%20start%20fail.png)
+After installation of [ZNC package from SynoCommunity](https://synocommunity.com/package/znc) on DSM (>= 6). ZNC will fail to start from "Package Center" due to ["Failed to run the package service" error.](https://hodzic.org/img/znc/znc%20package%20center%20start%20fail.png)
 
-To resolve this problem you can manually run ZNC binary by SSH-ing to your Synology and running:
+To resolve this problem you need to manually run ZNC binary by SSH-ing to your Synology and running:
 
 ```bash
 /volume1/@appstore/znc/bin/znc
 ```
-However, problem with this is that every time your Synology is restarted to update or any other reason, you'll have to remember to manually SSH and run the ZNC binary. 
+However, problem with this is that every time your Synology is restarted to update or any other reason, you'll have to remember to manually SSH and run the ZNC binary. Needless to say, by default updates are scheduled to run in middle of night ...
 
 ### Solution
 
@@ -24,10 +24,10 @@ In "Task Scheduler" of "Control Center":
 	* [General Setings](https://hodzic.org/img/znc/general%20settings.png)
 	* [Task Settings](https://hodzic.org/img/znc/task%20settings.png)
 
-With this setup, every time your DiskStation is restarted, ```znc_autostart.sh``` will make sure ZNC is started during boot procedure.
+With this setup, you don't have to think about manually starting ZNC anymore. Every time your DiskStation is restarted, ```znc_autostart.sh``` will make sure ZNC is started during boot procedure.
 
 ### Technical
 
 When run, ```znc_autostart.sh``` will check if there are any ZNC processes running. If there aren't any ZNC related processes running, it will run the ZNC binary. 
 
-Since this script is desigend to be run as root user. And running ZNC as root is too much of a security risk, additional wrapper has been written to run the main script function/logic as "admin" user.  
+Since this script is desigend to be run as root user. And running ZNC as root is too much of a security risk, additional wrapper has been written to run script main function/logic as "admin" user.  
