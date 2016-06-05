@@ -14,16 +14,17 @@ However, problem with this is that every time your Synology is restarted to upda
 
 ### Solution
 
-Place ```znc_autostart.sh``` script under admin user home dir (/var/services/homes/admin)
+Place ```znc_autostart.sh``` script under admin user home dir (```/var/services/homes/admin```)
 
 In "Task Scheduler" of "Control Center":
 
 * create [Triggered Task > User-defined script](http://hodzic.org/img/znc/create%20triggered%20task.png)
 
-	* with following settings for:
+* with following settings for:
 	* [General Setings](http://hodzic.org/img/znc/general%20settings.png)
 	* [Task Settings](http://hodzic.org/img/znc/task%20settings.png)
 
+With this setup, every time your DiskStation is restarted, ```znc_autostart.sh``` will make sure ZNC is started during boot procedure.
 
 ### Technical
 
