@@ -3,7 +3,7 @@ Script which ensures [ZNC](http://wiki.znc.in/ZNC) is started during Synology Di
 
 ### Problem
 
-After installation of [ZNC package from SynoCommunity](https://synocommunity.com/package/znc) on DSM (>= 6). ZNC will fail to start from "Package Center" with following [error.](http://hodzic.org/img/znc/znc%20package%20center%20start%20fail.png)
+After installation of [ZNC package from SynoCommunity](https://synocommunity.com/package/znc) on DSM (>= 6). ZNC will fail to start from "Package Center" with following [error.](https://hodzic.org/img/znc/znc%20package%20center%20start%20fail.png)
 
 To resolve this problem you can manually run ZNC binary by SSH-ing to your Synology and running:
 
@@ -18,11 +18,11 @@ Place ```znc_autostart.sh``` script under admin user home dir (```/var/services/
 
 In "Task Scheduler" of "Control Center":
 
-* create [Triggered Task > User-defined script](http://hodzic.org/img/znc/create%20triggered%20task.png)
+* create [Triggered Task > User-defined script](https://hodzic.org/img/znc/create%20triggered%20task.png)
 
 * with following settings for:
-	* [General Setings](http://hodzic.org/img/znc/general%20settings.png)
-	* [Task Settings](http://hodzic.org/img/znc/task%20settings.png)
+	* [General Setings](https://hodzic.org/img/znc/general%20settings.png)
+	* [Task Settings](https://hodzic.org/img/znc/task%20settings.png)
 
 With this setup, every time your DiskStation is restarted, ```znc_autostart.sh``` will make sure ZNC is started during boot procedure.
 
