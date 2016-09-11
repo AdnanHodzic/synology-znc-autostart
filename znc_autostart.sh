@@ -7,7 +7,7 @@
 
 znc_autostart(){
 pscheck="$(ps -ef |  grep -v grep | grep znc | awk \"{print $2}\")"
-runznc="/volume1/@appstore/znc/bin/znc &"
+runznc="/var/packages/znc/scripts/start-stop-status start"
 
 if [ ! -n "$pscheck" ]; then
     eval $runznc
@@ -15,4 +15,4 @@ fi
 }
 
 export -f znc_autostart
-su admin -c "znc_autostart"
+su root -c "znc_autostart"
