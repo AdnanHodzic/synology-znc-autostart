@@ -24,8 +24,15 @@ In "Task Scheduler" of "Control Center":
 * create [Triggered Task > User-defined script](https://hodzic.org/img/znc/create%20triggered%20task.png)
 
 * with following settings for:
-	* [General Setings](https://hodzic.org/img/znc/general%20settings.png)
-	* [Task Settings](https://hodzic.org/img/znc/task%20settings.png)
+
+**General Settings:**
+
+![General Settings](https://hodzic.org/img/znc/general%20settings.png)
+
+**Task Settings:**
+
+![Task Settings](https://hodzic.org/img/znc/task%20settings.png)
+
 
 With this setup, you don't have to think about manually starting ZNC anymore. Every time your DiskStation is restarted, ```znc_autostart.sh``` will make sure ZNC is started during boot procedure.
 
