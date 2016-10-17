@@ -21,7 +21,9 @@ Place ```znc_autostart.sh``` script under admin user home dir (```/var/services/
 
 In "Task Scheduler" of "Control Center":
 
-* create [Triggered Task > User-defined script](https://hodzic.org/img/znc/create%20triggered%20task.png)
+* create "Triggered Task > User-defined script"
+
+![Triggered Task > User-defined script](https://hodzic.org/img/znc/create%20triggered%20task.png)
 
 * with following settings for:
 
